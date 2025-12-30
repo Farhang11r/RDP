@@ -11,7 +11,7 @@ jobs:
 
     runs-on: windows-latest
     
-    timeout-minutes: 99999
+    timeout-minutes: 4000
 
     steps:
 
@@ -39,7 +39,7 @@ jobs:
 
     - run: Set-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp' -name "UserAuthentication" -Value 1
 
-    - run: Set-LocalUser -Name "Mr" -Password (ConvertTo-SecureString -AsPlainText "MrGuevara123" -Force)
+    - run: Set-LocalUser -Name "runneradmin" -Password (ConvertTo-SecureString -AsPlainText "P@ssw0rd!" -Force)
 
     - name: Create Tunnel
 
